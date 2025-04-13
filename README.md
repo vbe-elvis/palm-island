@@ -6,4 +6,4 @@ The game does not enforce rules, nor is it official. Only meant as a hobby proje
 
 Play the game through this Github pages url:
 
-[play](https://vbe-elvis.github.io/palm-island/index.html))
+[play](https://vbe-elvis.github.io/palm-island/index.html)
