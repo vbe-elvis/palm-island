@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-title-container">
+            <h1>Palm Island</h1>
+        </div>
+        <div>
+            <button onclick="flip(1)">2: Flip</button>
+            <button onclick="rotate180(1)">2: Rotate</button>
+            <button onclick="rotate90(1)">2: Take resources</button>
+        </div>
+        <div>
+            <button onclick="flip(0)">1: Flip</button>
+            <button onclick="rotate180(0)">1: Rotate</button>
+            <button onclick="rotate90(0)">1: Take resources</button>
+            <button onclick="nextCard(0)">1: Discard</button>
+        </div>
+        <div>
+            <button onclick="pay(0)">1: Pay</button>
+            <button onclick="pay(1)">2: Pay</button>
+            <button onclick="pay(2)">3: Pay</button>
+            <button onclick="pay(3)">4: Pay</button>
+        </div>
+    </header>
+    <main>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-inner" id="card-16">
+                    <div class="card-front">
+                        <img id="card-front-16" class="card-img">
+                    </div>
+                    <div class="card-back">
+                        <img id="card-back-16" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" id="card-15">
+                    <div class="card-front">
+                        <img id="card-front-15" class="card-img">
+                    </div>
+                    <div class="card-back">
+                        <img id="card-back-15" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" id="card-14">
+                    <div class="card-front">
+                        <img id="card-front-14" class="card-img">
+                    </div>
+                    <div class="card-back">
+                        <img id="card-back-14" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" id="card-13">
+                    <div class="card-front">
+                        <img id="card-front-13" class="card-img">
+                    </div>
+                    <div class="card-back">
+                        <img id="card-back-13" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" id="card-12">
+                    <div class="card-front">
+                        <img id="card-front-12" class="card-img">
+                    </div>
+                    <div class="card-back">
+                        <img id="card-back-12" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" id="card-11">
+                    <div class="card-front">
+                        <img id="card-front-11" class="card-img">
+                    </div>
+                    <div class="card-back">
+                        <img id="card-back-11" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" id="card-10">
+                    <div class="card-front">
+                        <img id="card-front-10" class="card-img">
+                    </div>
+                    <div class="card-back">
+                        <img id="card-back-10" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" id="card-9">
+                    <div class="card-front">
+                        <img id="card-front-9" class="card-img">
+                    </div>
+                    <div class="card-back">
+                        <img id="card-back-9" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" id="card-8">
+                    <div class="card-front">
+                        <img id="card-front-8" class="card-img">
+                    </div>
+                    <div class="card-back">
+                        <img id="card-back-8" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" id="card-7">
+                    <div class="card-front">
+                        <img id="card-front-7" class="card-img">
+                    </div>
+                    <div class="card-back">
+                        <img id="card-back-7" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" id="card-6">
+                    <div class="card-front">
+                        <img id="card-front-6" class="card-img">
+                    </div>
+                    <div class="card-back">
+                        <img id="card-back-6" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" id="card-5">
+                    <div class="card-front">
+                        <img id="card-front-5" class="card-img">
+                    </div>
+                    <div class="card-back">
+                        <img id="card-back-5" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" id="card-4">
+                    <div class="card-front">
+                        <img id="card-front-4" class="card-img">
+                    </div>
+                    <div class="card-back">
+                        <img id="card-back-4" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" id="card-3">
+                    <div class="card-front">
+                        <img id="card-front-3" class="card-img">
+                    </div>
+                    <div class="card-back">
+                        <img id="card-back-3" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" id="card-2">
+                    <div class="card-front">
+                        <img id="card-front-2" class="card-img">
+                    </div>
+                    <div class="card-back">
+                        <img id="card-back-2" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-inner" id="card-1">
+                    <div class="card-front">
+                        <img id="card-front-1" class="card-img">
+                    </div>
+                    <div class="card-back">
+                        <img id="card-back-1" class="card-img">
+                    </div>
+                </div>
+            </div>
+            <div class="top-card">
+                <div class="card-inner" id="card-0">
+                    <div class="card-front">
+                        <img id="card-front-0" class="card-img">
+                    </div>
+                    <div class="card-back">
+                        <img id="card-back-0" class="card-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
