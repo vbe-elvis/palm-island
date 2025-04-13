@@ -13,28 +13,28 @@ class Card {
 }
 
 const startCards = [ 
-    new Card(front = "/images/canoe-house-front.png", back = "/images/canoe-house-back.png"),
-    new Card(front = "/images/canoe-house-front.png", back = "/images/canoe-house-back.png"),
-    new Card(front = "/images/canoe-house-front.png", back = "/images/canoe-house-back.png"),
-    new Card(front = "/images/logger-front.png", back = "/images/logger-back.png"),
-    new Card(front = "/images/logger-front.png", back = "/images/logger-back.png"),
-    new Card(front = "/images/logger-front.png", back = "/images/logger-back.png"),
-    new Card(front = "/images/quarry-front.png", back = "/images/quarry-back.png"),
-    new Card(front = "/images/quarry-front.png", back = "/images/quarry-back.png"),
-    new Card(front = "/images/quarry-front.png", back = "/images/quarry-back.png"),
-    new Card(front = "/images/temple-front.png", back = "/images/temple-back.png"),
-    new Card(front = "/images/temple-front.png", back = "/images/temple-back.png"),
-    new Card(front = "/images/housing-front.png", back = "/images/housing-back.png"),
-    new Card(front = "/images/housing-front.png", back = "/images/housing-back.png"),
-    new Card(front = "/images/tool-maker-front.png", back = "/images/tool-maker-back.png"),
-    new Card(front = "/images/market-front.png", back = "/images/market-back.png"),
-    new Card(front = "/images/trade-house-front.png", back = "/images/trade-house-back.png"),
+    new Card(front = "images/canoe-house-front.png", back = "images/canoe-house-back.png"),
+    new Card(front = "images/canoe-house-front.png", back = "images/canoe-house-back.png"),
+    new Card(front = "images/canoe-house-front.png", back = "images/canoe-house-back.png"),
+    new Card(front = "images/logger-front.png", back = "images/logger-back.png"),
+    new Card(front = "images/logger-front.png", back = "images/logger-back.png"),
+    new Card(front = "images/logger-front.png", back = "images/logger-back.png"),
+    new Card(front = "images/quarry-front.png", back = "images/quarry-back.png"),
+    new Card(front = "images/quarry-front.png", back = "images/quarry-back.png"),
+    new Card(front = "images/quarry-front.png", back = "images/quarry-back.png"),
+    new Card(front = "images/temple-front.png", back = "images/temple-back.png"),
+    new Card(front = "images/temple-front.png", back = "images/temple-back.png"),
+    new Card(front = "images/housing-front.png", back = "images/housing-back.png"),
+    new Card(front = "images/housing-front.png", back = "images/housing-back.png"),
+    new Card(front = "images/tool-maker-front.png", back = "images/tool-maker-back.png"),
+    new Card(front = "images/market-front.png", back = "images/market-back.png"),
+    new Card(front = "images/trade-house-front.png", back = "images/trade-house-back.png"),
 ]
 
 const cards = startCards.map(value => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value)
-cards.push(new Card(front = "/images/round-card-front.png", back = "/images/round-card-back.png"))
+cards.push(new Card(front = "images/round-card-front.png", back = "images/round-card-back.png"))
 
 const selectedResources = []
 
