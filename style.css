@@ -12,6 +12,10 @@ body {
 
 button {
     margin: 10px;
+    border:1px solid rgb(11, 87, 26);
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(31, 132, 255);
 }
 
 .header-title-container {
