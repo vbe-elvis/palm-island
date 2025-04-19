@@ -96,7 +96,7 @@ function nextCard(id) {
 function storeState() {
     previous.push(current);
     if (previous.length > 25) previous.splice(0, 1);
-    current = { cards: structuredClone(cards), selectedResources: structuredClone(selectedResources) };
+    current = structuredClone({ cards: cards, selectedResources: selectedResources });
 }
 
 function undo() {
@@ -104,7 +104,7 @@ function undo() {
         const toRestore = previous.pop();
         cards = toRestore.cards;
         selectedResources = toRestore.selectedResources;
-        current = { cards: structuredClone(cards), selectedResources: structuredClone(selectedResources) };
+        current = structuredClone({ cards: cards, selectedResources: selectedResources });
         updateCards();
     }
 }
