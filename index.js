@@ -29,14 +29,19 @@ const startCards = [
     new Card(front = "images/tool-maker-front.png", back = "images/tool-maker-back.png"),
     new Card(front = "images/market-front.png", back = "images/market-back.png"),
     new Card(front = "images/trade-house-front.png", back = "images/trade-house-back.png"),
-]
+];
 
-const cards = startCards.map(value => ({ value, sort: Math.random() }))
+
+let cards = startCards.map(value => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value)
-cards.push(new Card(front = "images/round-card-front.png", back = "images/round-card-back.png"))
+    .map(({ value }) => value);
+cards.push(new Card(front = "images/round-card-front.png", back = "images/round-card-back.png"));
 
-const selectedResources = []
+
+let current = { cards: structuredClone(cards), selectedResources: [] };
+let previous = [];
+
+let selectedResources = [];
 
 function updateCards() {
     let resources = 0;
@@ -60,30 +65,48 @@ function updateCards() {
 }
 
 function flip(id) {
-    cards[id].flipped = !cards[id].flipped
-    nextCard(id)
+    cards[id].flipped = !cards[id].flipped;
+    nextCard(id);
 }
 
 function rotate90(id) {
-    cards[id].rotate90 = !cards[id].rotate90
-    selectedResources.push(cards[id])
-    nextCard(id)
+    cards[id].rotate90 = !cards[id].rotate90;
+    selectedResources.push(cards[id]);
+    nextCard(id);
 }
 
 function rotate180(id) {
-    cards[id].rotate180 = !cards[id].rotate180
-    nextCard(id)
+    cards[id].rotate180 = !cards[id].rotate180;
+    nextCard(id);
 }
 
 function pay(id) {
-    const card = selectedResources.splice(id, 1)[0]
-    card.rotate90 = false
-    updateCards()
+    const card = selectedResources.splice(id, 1)[0];
+    card.rotate90 = false;
+    storeState();
+    updateCards();
 }
 
 function nextCard(id) {
-    cards.push(cards.splice(id, 1)[0])
-    updateCards()
+    cards.push(cards.splice(id, 1)[0]);
+    storeState();
+    updateCards();
+}
+
+function storeState() {
+    previous.push(current);
+    if (previous.length > 25) previous.splice(0, 1);
+    current = { cards: structuredClone(cards), selectedResources: structuredClone(selectedResources) };
+}
+
+function undo() {
+    if (previous.length > 0) {
+        const toRestore = previous.pop();
+        cards = toRestore.cards;
+        selectedResources = toRestore.selectedResources;
+        current = { cards: structuredClone(cards), selectedResources: structuredClone(selectedResources) };
+        updateCards();
+    }
 }
 
 updateCards()
